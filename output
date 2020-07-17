@@ -1,0 +1,70 @@
+# ... /PycharmProjects/docu_Clustering/Doc_Clustering.py
+
+ Input Text Corpus: 
+
+    The students went to their new school today.
+    Azad: was the best basketball player in the city.
+    Next week, the basketball league will start.
+    The school is starting their classes today.
+    Best team from UoZ will play with the best team from UoD.
+    Teachers were so excited to see their new students.
+    Hello Students! Cheered the school principle.
+    Did Students start to play basketball from day one?
+
+ Size of corpus:  8 
+
+
+ Text Corpus after punc removal: 
+
+    The students went to their new school today
+    Azad was the best basketball player in the city
+    Next week the basketball league will start
+    The school is starting their classes today
+    Best team from UoZ will play with the best team from UoD
+    Teachers were so excited to see their new students
+    Hello Students Cheered the school principle
+    Did Students start to play basketball from day one
+
+stopwords.words('english')
+: ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', 'couldn', 'didn', 'doesn', 'hadn', 'hasn', 'haven', 'isn', 'ma', 'mightn', 'mustn', 'needn', 'shan', 'shouldn', 'wasn', 'weren', 'won', 'wouldn'] 
+
+
+ file_IDs : 
+  [0, 1, 2, 3, 4, 5, 6, 7]
+
+ Terms/Features of TFIDF Matrix: 
+ ['azad', 'basketball', 'best', 'cheered', 'city', 'class', 'day', 'excited', 'hello', 'league', 'new', 'next', 'one', 'play', 'player', 'principle', 'school', 'see', 'start', 'starting', 'student', 'teacher', 'team', 'today', 'uod', 'uoz', 'wa', 'week', 'went']
+
+ TF/IDF matrix: 
+
+0 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.46, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.35, 0.0, 0.0, 0.46, 0.0, 0.0, 0.0, 0.0, 0.55]
+1 [0.44, 0.32, 0.37, 0.0, 0.44, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.44, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.44, 0.0, 0.0]
+2 [0.0, 0.35, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.49, 0.0, 0.49, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.41, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.49, 0.0]
+3 [0.0, 0.0, 0.0, 0.0, 0.0, 0.56, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.0, 0.56, 0.0, 0.0, 0.0, 0.47, 0.0, 0.0, 0.0, 0.0, 0.0]
+4 [0.0, 0.0, 0.54, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.27, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.65, 0.0, 0.32, 0.32, 0.0, 0.0, 0.0]
+5 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.49, 0.0, 0.0, 0.41, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.49, 0.0, 0.0, 0.31, 0.49, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+6 [0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.37, 0.0, 0.0, 0.0, 0.32, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+7 [0.0, 0.35, 0.0, 0.0, 0.0, 0.0, 0.48, 0.0, 0.0, 0.0, 0.0, 0.0, 0.48, 0.4, 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+<bound method KMeans.fit of KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=2, n_init=10, n_jobs=1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)>
+
+ Results of clustering:
+                                        document_text  cluster_id
+0        The students went to their new school today           0
+1      Azad was the best basketball player in the...           1
+2         Next week the basketball league will start           1
+3         The school is starting their classes today           0
+4      Best team from UoZ will play with the best...           1
+5      Teachers were so excited to see their new ...           0
+6        Hello Students Cheered the school principle           0
+7      Did Students start to play basketball from...           1
+
+ Clustering Evaluation Results:
+
+pre: [ 1.    0.75]
+rec: [ 0.8  1. ]
+fsco: [ 0.88888889  0.85714286]
+supp: [5 3]
+
+Process finished with exit code 0
